@@ -1,0 +1,39 @@
+<!doctype html><html><head>
+<title>Cella Rule 90</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body><h1>CS335 Project 1 - Cella Rule 90</h1>
+<!--<h4>01/03/2019 Derek Dorr: Team DRK</h4>-->
+
+<canvas id="grid" width="450" height="450"></canvas>
+
+</body>
+<script src="../cs335/assets/draw-stuff.js"></script>
+<script>
+// after "Introducing JavaScript Game Development" by Stuart.
+
+// =====================================================  draw_title ====
+// Draw filled rect.
+function draw_title( context )
+{
+    context.save( );
+    context.fillStyle = 'black';
+    context.font = "30px Arial";
+    context.fillText( "DRK", 50, 50 );
+    context.restore( );
+}
+// =====================================================  Main ====
+  var canvas = document.getElementById( "grid" );
+  var context = canvas.getContext( "2d" );
+  var mynum = 1;
+
+  //draw_rect(context);
+  //draws cella rule 90 algorithm
+  draw_cella( context );
+
+  // Draw a grid
+  draw_grid( context, 10, 50, 'white', 'red' );
+  draw_title( context );
+
+</script>
+</html>

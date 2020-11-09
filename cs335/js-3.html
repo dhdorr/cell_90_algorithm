@@ -1,0 +1,37 @@
+<!doctype html><html><head>
+<title>Knights Max Flow: DRK</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body><h1>CS335 Project 3 - Knight's Max Flow: DRK</h1>
+<!--<h4>01/03/2019 Derek Dorr: Team DRK</h4>-->
+
+<canvas id="grid" width="1000" height="1000"></canvas>
+
+</body>
+<script src="../cs335/assets/knightsMaxFlow.js"></script>
+<script>
+// after "Introducing JavaScript Game Development" by Stuart.
+
+// =====================================================  draw_title ====
+// Draw filled rect.
+function draw_title( context )
+{
+    context.save( );
+    context.fillStyle = 'black';
+    context.font = "20px Arial";
+    context.fillText( "DRK", 40, 40 );
+    context.restore( );
+}
+// =====================================================  Main ====
+  var canvas = document.getElementById( "grid" );
+  var context = canvas.getContext( "2d" );
+  var mynum = 1;
+
+  draw_board(context);
+  //draws cella rule 90 algorithm
+  // Draw a grid
+  draw_grid( context, 10, 50, 'white', 'red' );
+  draw_title( context );
+
+</script>
+</html>
